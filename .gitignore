@@ -1,0 +1,59 @@
+# Compiled source #
+**.class
+
+# Package Files #
+**.war
+**.ear
+**.zip
+!dataset/domain/src/test/resources/edu/dfci/cccb/mev/dataset/domain/zip/*
+
+# Test Third-Party Javascript Libraries #
+src/**/html/**/lib/*
+src/**/html/app/data/*
+# Others #
+
+.Rhistory
+
+**.eclipse
+=======
+
+# IDE Generated Files
+.project
+.classpath
+.settings/
+**.swp
+**.orig
+.springBeans
+.tern-project
+.externalToolBuilders/
+.idea/
+**.iml
+# Maven target
+target/
+/target
+
+#HSQL
+mem.log
+mem.properties
+mem.script
+
+
+#Backuped files
+bkp/
+/bkp
+
+#AWS Beanstalk
+**/.elasticbeanstalk/*
+!**/.elasticbeanstalk/*.cfg.yml
+!**/.elasticbeanstalk/*.global.yml
+
+#Bower 
+**.matrix
+**bower_components/
+!web/src/main/javascript/edu/dfci/cccb/mev/web/vendor/bower_components/
+
+#npm
+#**node_modules/
+**node_modules/
+npm-debug.log
+

@@ -1,0 +1,27 @@
+define(["mui", "mev-bs-modal", "mev-domain-common", "angular-resource", "angular-ui-router", "mev-workspace",
+	"angular-ui-bootstrap",
+	"./params/view/text/TextParamDirective",
+	"./params/view/integer/IntegerParamDirective",
+	"./params/view/boolean/BooleanParamDirective",
+	"./params/view/selectionSet/SelectionSetParamDirective",
+	"./params/view/decimal/DecimalParamDirective",
+	"./params/view/label/ParamLabelDirective",
+	"./params/view/select/SelectParamDirective",
+	"./params/view/any/AnyParameterDirective",
+	"./params/model/selectionSet/SelectionSetParam",
+	"./params/model/AnalysisParamsFactory",
+	"./params/model/parentAnalysis/ParentAnalysisParam",
+	"./params/model/annotationField/AnnotationFieldParam",
+	"./type/model/AnalysisTypes",
+	"./type/model/AnalysisType",
+	"./launch/AnalysisLauncher",
+	"./type/view/startForm/AnalysisStartFormDirective",
+	"./type/view/modal/AnalysisStartModalDirective",
+	"./type/view/modal/AnalysisStartButtonDirective",
+	"./type/view/route/AnalysisTypeState",
+	"./type/view/route/AnalysisErrorState",
+	"./endpoint/rest/AnalysisRest",
+	"./events/AnalysisEventBus"
+	], function(ng){
+	return ng.module("mevAnalysis", arguments, arguments);
+});

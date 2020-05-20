@@ -1,0 +1,46 @@
+<div class="row" layout-row>
+	
+	<div layout-column="left" class="layout-column" ng-class="{'col-0': layoutColumn.isClosed(), 'col-md-3': !layoutColumn.isClosed()}" content-id="content-wrapper" >		
+		<div class="pull-right column-config-menu">
+<!-- 			<div class="btn btn-info btn-sm" ng-click="layoutColumn.toggle()"><i class="fa fa-arrow-left"></i></div> -->
+		</div>
+		
+		<div class="row column-header">			
+			<div class="project-tree-header">
+				<select class="form-control" ng-options="datasetName for datasetName in DatasetProjectViewVM.datasetNames" ng-change="DatasetProjectViewVM.switchDataset()" ng-model="DatasetProjectViewVM.curDatasetName"></select>
+			</div>
+		</div>
+		<div class="row column-body project-tree-content">	
+		   	<project-tree class="col-md-12" node-type='Data' project="DatasetProjectViewVM.getProject()"></project-tree>
+	   </div>
+	</div>	
+	
+	<div layout-column="right" class="layout-column" ng-class="{'col-md-12': layoutColumn.isClosed(), 'col-md-9': !layoutColumn.isClosed()}" id="content-wrapper">
+		
+		<div class="pull-right column-config-menu">
+			<div class="btn btn-info btn-sm" ng-click="layoutColumn.toggle()">
+		  		<i ng-class="{'fa': true, 'fa-compress': layoutColumn.isClosed(), 'fa-expand': !layoutColumn.isClosed()}"></i>
+			</div>
+		</div>
+		
+		<div gridster="gridsterOpts">
+			<div ui-view class="views-dataset" mev-notific-alert></div>
+		</div>
+	</div>
+</div>
+
+<!--
+These analyses are disable for now
+<bsmodal bindid="fishertest" func="" header="Fisher's Exact Test">
+ <div class="modal-FTest" heatmap-dataset="DatasetProjectViewVM.project.dataset"></div>
+</bsmodal>
+<bsmodal bindid="wilcoxon" func="" header="Wilcoxon Rank Sum Test">
+ <div class="modal-Wilcoxon" heatmap-dataset="DatasetProjectViewVM.project.dataset"></div>
+</bsmodal>
+<bsmodal bindid="nmfModal" func="" header="Non-Negative Matrix Factorization">
+ <div class="modal-nmf" dataset="DatasetProjectViewVM.project.dataset"></div>
+</bsmodal>
+-->
+
+<mev-analysis-start-modal mev-analysis-type="analysisType" ng-repeat="analysisType in DatasetProjectViewVM.analysisTypes" >
+</mev-analysis-start-modal>

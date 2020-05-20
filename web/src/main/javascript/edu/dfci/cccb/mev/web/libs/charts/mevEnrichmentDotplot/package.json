@@ -1,0 +1,34 @@
+{
+  "name": "mev-enrichment-dotplot",
+  "version": "0.0.1",
+  "description": "mev enrichment bar chart",
+  "main": "src/main/mev-enrichment-dotplot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/dfci-cccb/mev"
+  },
+  "author": "apartensky",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.8.2",
+    "mev-dotplot": "file:../mevDotplot",
+    "mui": "file:../../mui",
+    "steal": "^0.13.2",
+    "system-text": "^0.1.0",
+    "jquery": "~2.2.0"
+  },
+  "devDependencies": {
+    "mev-steal-bootstrap": "file:../../utils/steal-bootstrap",
+    "mevPathwayEnrichment": "file:../../analyses/pathwayEnrichment",
+    "systemjs-plugin-json": "^0.1.0"
+  },
+  "system": {
+    "ext": {
+      "html": "system-text",
+      "json": "systemjs-plugin-json"
+    }
+  }
+}
