@@ -44,11 +44,18 @@
       <artifactId>google-cloud-storage</artifactId>
       <version>0.7.0</version>
       <exclusions>
-        <exclusion>
+        <!--exclusion>
           <groupId>javax.servlet</groupId>
-          <artifactId>servlet-api</artifactId>
-        </exclusion>
+          <artifactId>javax.servlet-api</artifactId>
+        </exclusion-->
       </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.0.1</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -649,7 +656,7 @@
         <artifactId>rserve-maven-plugin</artifactId>
         <version>0.0.7</version>
         <configuration>
-          <rserveSource>https://raw.githubusercontent.com/dfci-cccb/maven-repo/master/raven/Rserve/1.8-1/Rserve_1.8-1.tar.gz</rserveSource>
+          <rserveSource>https://raw.githubusercontent.com/dfci-cccb/maven-repo/master/raven/Rserve/1.8.1/Rserve_1.8.1.tar.gz</rserveSource>
           <onInitialize>
             sapply (c ("NMF", "RProtoBuf", "jsonlite",
             "injectoR", "rafalib", "amap"), function (lib)
@@ -722,7 +729,7 @@
 
     <pluginManagement>
       <plugins>
-        <!--This plugin's configuration is used to store Eclipse m2e settings 
+        <!--This plugin's configuration is used to store Eclipse m2e settings
           only. It has no influence on the Maven build itself. -->
         <plugin>
           <groupId>org.eclipse.m2e</groupId>

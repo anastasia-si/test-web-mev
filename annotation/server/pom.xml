@@ -15,11 +15,11 @@
 		<version>BAYLIE-SNAPSHOT</version>
 	</parent>
 	<properties>
-		<jetty.version>8.1.13.v20130916</jetty.version>		
+		<jetty.version>8.1.13.v20130916</jetty.version>
 		<jooq.codegen.db.driver>org.h2.Driver</jooq.codegen.db.driver>
 		<jooq.codegen.db.url>jdbc:h2:file:${project.build.directory}/mev-probe-annotations-codegen</jooq.codegen.db.url>
 		<jooq.codegen.db.username>sa</jooq.codegen.db.username>
-		<jooq.codegen.db.password></jooq.codegen.db.password>		
+		<jooq.codegen.db.password></jooq.codegen.db.password>
 		<jooq.codegen.db.dialect>org.jooq.util.h2.H2Database</jooq.codegen.db.dialect>
 		<skip.db.creation>false</skip.db.creation>
 	</properties>
@@ -105,7 +105,7 @@
 			<version>${hibernate.version}</version>
 		</dependency>
 
-		<!-- Persistence Configuration -->		
+		<!-- Persistence Configuration -->
 		<dependency>
 			<groupId>edu.dfci.cccb</groupId>
 			<artifactId>mev-configuration-persistence</artifactId>
@@ -183,10 +183,10 @@
 		<dependency>
 			<groupId>org.marc4j</groupId>
 			<artifactId>marc4j</artifactId>
-			<version>2.4</version>
+			<version>2.7.3</version>
 		</dependency>
 		<dependency>
-			<groupId>edu.mit.simile</groupId>
+			<groupId>org.openrefine.dependencies</groupId>
 			<artifactId>vicino</artifactId>
 			<version>1.1</version>
 		</dependency>
@@ -194,7 +194,7 @@
 		<dependency>
 			<groupId>edu.mit.simile</groupId>
 			<artifactId>butterfly</artifactId>
-			<version>1.0.1</version>
+			<version>1.0</version>
 		</dependency>
 
 	</dependencies>
